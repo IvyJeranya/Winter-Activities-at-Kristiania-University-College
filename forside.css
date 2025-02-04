@@ -1,0 +1,464 @@
+/* ===== BODY/GENERELL STIL ===== */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0; /* Fjerner standard marginer for en helhetlig layout. */
+    padding: 0; /* Fjerner standard padding for en ren start. */
+    background-color: #f8f9fa;
+    color: #333;
+    scroll-behavior: smooth; /* Gir mykere scrolling */
+}
+
+/* ===== NAVIGASJONSMENY ===== */
+.header {
+    position: sticky; /* Holder navigasjonsmenyen synlig øverst på siden når brukeren scroller. */
+    top: 0; /* Plasserer headeren helt øverst på siden. */
+    width: 100%; /* Headeren fyller hele bredden av siden. */
+    background-color: white;
+    border-bottom: 1px solid #ddd; /* Legger til en tynn, grå linje under headeren for visuell separasjon. */
+    z-index: 1000; /* Sørger for at headeren ligger over annet innhold på siden. */
+}
+
+/* Container for navigerings-seksjonen */
+.nav-container {
+    display: flex; /* Bruker Flexbox for å plassere innholdet horisontalt. */
+    justify-content: space-between; /* Fordeler plass jevnt mellom logoen, lenkene og ikonene. */
+    align-items: center; /* Sentraliserer innholdet vertikalt i containeren. */
+    padding: 10px 20px; /* Legger til litt innvendig mellomrom for luft rundt innholdet. */
+    max-width: 1200px; /* Begrenser bredden for bedre lesbarhet på store skjermer. */
+    margin: 0 auto; /* Sentraliserer containeren på siden. */
+}
+
+/* Logo */
+.logo img {
+    height: 80px;
+    cursor: pointer; /* Endrer musepekeren til en hånd for å indikere at logoen er klikkbar. */
+}
+
+/* Navigerings-seksjon */
+.nav {
+    flex: 1; /* Lar navigasjonsseksjonen fylle den tilgjengelige plassen. */
+}
+
+/* Liste over navigasjonslenker */
+.nav-links {
+    display: flex; /* Bruker flexbox for å vise lenkene horisontalt. */
+    list-style: none; /* Fjerner standard punktmerking fra listen. */
+    justify-content: center; /* Sentraliserer lenkene horisontalt. */
+    gap: 20px; /* Legger til mellomrom mellom lenkene. */
+    margin: 0; /* Fjerner standard marg. */
+    padding: 0; /* Fjerner standard padding. */
+}
+
+/* Listeelementer */
+.nav-links li {
+    margin: 0; /* Fjerner ekstra margin rundt listeelementene. */
+}
+
+/* Lenker */
+.nav-links a {
+    text-decoration: none; /* Fjerner standard understrekning fra lenkene. */
+    color: #333; 
+    font-size: 18px; 
+    font-weight: bold; 
+    padding: 10px; 
+    transition: transform 0.3s ease, color 0.3s ease; /* Gir en jevn overgang ved hover. */
+}
+
+/* Hover-effekt for lenker */
+.nav-links a:hover {
+    transform: scale(1.2); /* Forstørrer lenken. */
+    color: #9dcfe1; /* Endrer fargen ved hover. */
+}
+
+/* Ikoner */
+.nav-icons {
+    display: flex; /* Plasserer ikonene horisontalt. */
+    align-items: center; /* Sentraliserer ikonene vertikalt. */
+    gap: 35px; /* Legger til mellomrom mellom ikonene. */
+}
+
+.icon {
+    height: 25px;
+    width: 25px;
+    cursor: pointer; /* Endrer musepekeren til en hånd for å indikere klikkbare ikoner. */
+    transition: transform 0.3s ease; /* Gir en glatt overgangseffekt når ikonene hovres. */
+}
+
+.icon:hover {
+    transform: scale(1.2); /* Forstørrer ikonet ved hover. */
+}
+
+/* Hamburger-meny */
+.hamburger-menu img {
+    height: 25px;
+    width: 25px;
+}
+
+.hamburger-menu {
+    background: none; /* Ingen bakgrunnsfarge for hamburger-menyknappen. */
+    border: none; /* Ingen kantlinje rundt knappen. */
+    padding: 0; /* Fjerner innvendig mellomrom. */
+}
+
+/* ===== HERO SEKSJON - HOVEDINNHOLD ===== */
+/* Container for hero-seksjonen */
+.hero {
+    display: flex; /* Bruker Flexbox for å plassere bilde og tekst side om side. */
+    max-width: 1200px; /* Begrenser bredden på seksjonen for bedre lesbarhet. */
+    margin: 80px auto; /* Legger til avstand fra toppen og sentrerer seksjonen horisontalt. */
+    gap: 20px; /* Gir mellomrom mellom bilde- og tekstinnhold. */
+    padding: 20px; /* Gir luft rundt innholdet. */
+}
+
+.hero-image img {
+    width: 100%; /* Bildet skaleres til å fylle hele sin container. */
+    max-width: 600px; /* Begrenset maksimal bredde for bildet. */
+    margin: 20px; /* Legger til avstand rundt bildet. */
+    border-radius: 10px; /* Gjør hjørnene på bildet avrundet for et moderne utseende. */
+    opacity: 0; /* Starter som usynlig for animasjonseffekt. */
+    transform: translateX(-100%); /* Flytter bildet utenfor venstre side av skjermen. */
+    animation: slide-in 1.5s ease-in-out forwards; /* Definerer en animasjon som gjør at bildet glir inn. */
+}
+
+/* Animasjon for å få bildet til å gli inn fra venstre side */
+@keyframes slide-in {
+    from {
+        opacity: 0; /* Starter som helt usynlig. */
+        transform: translateX(-100%); /* Starter utenfor skjermen på venstre side. */
+    }
+    to {
+        opacity: 1; /* Gjør bildet fullt synlig. */
+        transform: translateX(0); /* Flytter bildet til sin naturlige posisjon. */
+    }
+}
+
+.hero-text {
+    flex: 1; /* Lar teksten ta opp resten av den tilgjengelige plassen ved siden av bildet. */
+    padding: 20px; /* Gir mellomrom rundt teksten. */
+}
+
+.hero-text h2 {
+    font-size: 2rem; /* Setter overskriften til en stor skriftstørrelse. */
+    margin-bottom: 20px; /* Gir avstand mellom overskriften og teksten under. */
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 25px; /* Gir avstand mellom teksten og eventuelle knapper eller andre elementer. */
+    line-height: 1.6; /* Setter linjeavstanden for bedre lesbarhet. */
+}
+
+/* Call-to-action-knapp */
+.cta-button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    font-size: 18px;
+    border: none; /* Fjerner standard kantlinje rundt knappen. */
+    border-radius: 5px;
+    text-decoration: none; /* Fjerner eventuell understrek fra lenken. */
+    cursor: pointer; /* Indikerer at knappen er interaktiv. */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Gir en jevn overgangseffekt ved hover. */
+}
+
+/* Hover-effekt for Call-to-action-knappen */
+.cta-button:hover {
+    background-color: #9dcfe1; /* Endrer farge når brukeren hovrer over knappen. */
+    transform: scale(1.05); /* Forstørrer knappen litt for en dynamisk effekt. */
+}
+
+
+/* ===== HVORFOR DELTA? ===== */
+/* Container for "Hvorfor delta?"-seksjonen */
+.benefits {
+    text-align: center; /* Sentrerer teksten i hele seksjonen. */
+    padding: 50px 20px; 
+    background-color: #eef0f2;
+}
+
+.benefits h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+/* Container for boksene med fordeler */
+.benefit-items {
+    display: flex; /* Bruker Flexbox for å plassere boksene på én rad. */
+    justify-content: center; /* Sentrerer boksene horisontalt. */
+    gap: 20px; /* Legger mellomrom mellom hver boks. */
+}
+
+/* Individuell boks */
+.benefit-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center; /* Sentrerer tekst og bilde i boksen. */
+    max-width: 300px; /* Begrenser bredden for konsistent størrelse. */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Legger til en svak skygge for dybdeeffekt. */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Gjør overganger glatte og behagelige. */
+}
+
+/* Hover-effekt for boksene */
+.benefit-item:hover {
+    transform: translateY(-15px); /* Flytter boksen opp for å indikere interaktivitet. */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Øker skyggen for å fremheve boksen. */
+}
+
+/* Ikon i hver boks */
+.benefit-item img {
+    width: 65px;
+    margin-bottom: 15px;
+}
+
+.benefit-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* ===== DELTAKELSE ===== */
+/* Container for "Deltakelse"-seksjonen */
+.signup {
+    text-align: center; /* Sentrerer all tekst og innhold i seksjonen. */
+    background-color: #eef0f2;
+    padding: 50px 20px;
+}
+
+.signup h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.signup p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Container for skjemaet */
+.signup-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex; 
+    flex-direction: column; /* Plasserer skjemaelementene vertikalt. */
+    gap: 15px;
+}
+
+.signup-form label {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Inndatafeltene */
+.signup-form input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Send-knappen */
+.signup-form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Indikerer at knappen er interaktiv. */
+    transition: background-color 0.3s ease; /* Gjør bakgrunnsendringer glatte. */
+}
+
+/* Hover-effekt for knappen */
+.signup-form button:hover {
+    background-color: #9dcfe1;
+}
+
+/* ===== STUDENTUTTALELSER ===== */
+/* Container for "Studentuttalelser"-seksjonen */
+.testimonials {
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 50px 20px;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.testimonials p {
+    text-align: center;
+}
+
+/* Container for individuelle uttalelser */
+.testimonial-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Individuell boks for en studentuttalelse */
+.testimonial-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lett skygge for å gi en opphøyd effekt. */
+    max-width: 300px;
+    text-align: left; /* Teksten er venstrejustert inni boksen. */
+    position: relative; /* Forbereder posisjonering av eventuelle barn-elementer som ikoner. */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Glatte overganger for hover-effekter. */
+}
+
+/* Hover-effekt for uttalelsesboksen */
+.testimonial-item:hover {
+    transform: translateY(-15px); /* Løfter boksen litt opp for en interaktiv effekt. */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Økt skygge for å fremheve boksen. */
+}
+
+/* Ikon i toppen av boksen */
+.testimonial-icon {
+    width: 65px;
+    margin: 0 auto 15px auto; /* Sentrerer ikonet horisontalt og gir avstand nedenfor. */
+    display: block; /* Sikrer at ikonet tar hele linjen for sentrering. */
+}
+
+/* ===== OM OSS ===== */
+.about-us {
+    background-color: #eef0f2; /* Grå bakgrunn som fyller hele bredden */
+    padding: 50px 0; /* Vertikal padding for luft rundt innholdet */
+}
+
+.about-us-content {
+    display: flex; /* Plasserer tekst og bilde side om side */
+    justify-content: space-between; /* Fordeler tekst og bilde jevnt */
+    align-items: center; /* Vertikal sentrering */
+    max-width: 1200px; /* Begrens bredde til innholdet */
+    margin: 0 auto; /* Sentrer innholdet horisontalt */
+    gap: 20px; /* Mellomrom mellom tekst og bilde */
+    padding: 0 20px; /* Litt ekstra horisontal padding for mindre skjermer */
+}
+
+.about-text {
+    flex: 1; /* Lar teksten ta opp tilgjengelig plass */
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555;
+    line-height: 1.6;
+}
+.about-image img {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Skyggeeffekt for å gi bildet en opphøyd følelse. */
+    opacity: 0; /* Startbildet som usynlig for animasjonen. */
+    transform: translateX(100%); /* Starter animasjonen ved å plassere bildet utenfor skjermen (til høyre). */
+    animation: slide-in-right 1.5s ease-in-out forwards; /* Bruker keyframes til å animere bildet. */
+    animation-delay: 3.5s; /* Forsinker animasjonen for å synkronisere med scroll. */
+}
+
+/* Animasjon for å skyve bildet inn fra høyre */
+@keyframes slide-in-right {
+    from {
+        opacity: 0; /* Starter som usynlig. */
+        transform: translateX(100%); /* Bildet begynner utenfor skjermen på høyre side. */
+    }
+    to {
+        opacity: 1; /* Ender som synlig. */
+        transform: translateX(0); /* Flytter bildet til sin opprinnelige posisjon. */
+    }
+}
+
+/* ===== FAQ-SEKSJON ===== */
+/* Container for "FAQ"-seksjonen */
+.faq {
+    text-align: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+/* FAQ-tittel */
+.faq h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+/* FAQ-elementer */
+.faq-items {
+    display: flex;
+    flex-direction: column; /* Elementene stables vertikalt. */
+    gap: 20px;
+}
+
+.faq-item h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+    transition: color 0.3s ease; /* Glidende fargeovergang ved hover. */
+}
+
+/* Hover-effekt for spørsmål */
+.faq h3:hover {
+    color: #9dcfe1;
+    cursor: help; /* Bruker "help"-pekeren for å indikere ekstra informasjon. */
+}
+
+.faq-item p {
+    font-size: 1rem;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+/* ===== KONTAKT-SEKSJON ===== */
+/* Container for "Kontakt"-seksjonen */
+.contact {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #eef0f2;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    margin-bottom: 30px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center; /* Sentraliserer all tekst og innhold i footer. */
+    padding: 20px; /* Gir 20px plass rundt teksten i footeren. */
+    background-color: #333; 
+    color: white; 
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center; /* Sentraliserer ikonene. */
+    gap: 15px; /* Avstand mellom ikonene. */
+    margin-top: 10px; /* Plass over ikonene. */
+}
+
+footer .social-icons img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer; /* Endrer musepekeren til en hånd for å indikere at den er klikkbar. */
+    transition: transform 0.3s ease;
+}
+
+footer .social-icons img:hover {
+    transform: scale(1.2); /* Forstørrer ikonene ved hover. */
+}

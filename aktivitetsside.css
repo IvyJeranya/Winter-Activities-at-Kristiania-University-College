@@ -1,0 +1,263 @@
+/* ===== BODY/GENERELL STIL ===== */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0; /* Fjerner standard marginer for en helhetlig layout. */
+    padding: 0; /* Fjerner standard padding for en ren start. */
+    background-color: #f8f9fa; 
+    color: #333;
+    scroll-behavior: smooth; /* Gir mykere scrolling */
+}
+
+/* ===== NAVIGASJONSMENY ===== */
+.header {
+    position: sticky; /* Holder navigasjonsmenyen synlig på toppen ved scrolling. */
+    top: 0; /* Plasserer headeren helt øverst på siden. */
+    width: 100%; /* Sørger for at headeren strekker seg over hele bredden. */
+    background-color: white;
+    border-bottom: 1px solid #ddd; /* Tynn linje for å skille headeren fra resten av siden. */
+    z-index: 1000; /* Sørger for at headeren ligger over andre elementer. */
+}
+
+/* Container for navigerings-seksjonen */
+.nav-container {
+    display: flex; /* Bruker Flexbox for å plassere innholdet horisontalt. */
+    justify-content: space-between; /* Fordeler plass jevnt mellom logoen, lenkene og ikonene. */
+    align-items: center; /* Sentraliserer innholdet vertikalt i containeren. */
+    padding: 10px 20px; /* Legger til litt innvendig mellomrom for luft rundt innholdet. */
+    max-width: 1200px; /* Begrenser bredden for bedre lesbarhet på store skjermer. */
+    margin: 0 auto; /* Sentraliserer containeren på siden. */
+}
+
+/* Logo */
+.logo img {
+    height: 80px; 
+    cursor: pointer; /* Endrer musepekeren til en hånd for å indikere at den er klikkbar. */
+}
+
+/* Navigerings-seksjon */
+.nav {
+    flex: 1; /* Lar navigasjonsseksjonen fylle den tilgjengelige plassen. */
+}
+
+/* Liste over navigasjonslenker */
+.nav-links {
+    display: flex; /* Bruker flexbox for å vise lenkene horisontalt. */
+    list-style: none; /* Fjerner standard punktmerking fra listen. */
+    justify-content: center; /* Sentraliserer lenkene horisontalt. */
+    gap: 20px; /* Legger til mellomrom mellom lenkene. */
+    margin: 0; /* Fjerner standard marg. */
+    padding: 0; /* Fjerner standard padding. */
+}
+
+/* Listeelementer */
+.nav-links li {
+    margin: 0; /* Fjerner ekstra margin rundt listeelementene. */
+}
+
+/* Lenker */
+.nav-links a {
+    text-decoration: none; /* Fjerner standard understrekning fra lenkene. */
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    transition: transform 0.3s ease, color 0.3s ease; /* Gir en jevn overgang ved hover. */
+}
+
+/* Hover-effekt for lenker */
+.nav-links a:hover {
+    transform: scale(1.2); /* Forstørrer lenken. */
+    color: #9dcfe1; /* Endrer fargen ved hover. */
+}
+
+/* Ikoner */
+.nav-icons {
+    display: flex; /* Plasserer ikonene horisontalt. */
+    align-items: center; /* Sentraliserer ikonene vertikalt. */
+    gap: 35px; /* Legger til mellomrom mellom ikonene. */
+}
+
+.icon {
+    height: 20px;
+    width: 20px;
+    cursor: pointer; /* Endrer musepekeren til en hånd for å indikere at den er klikkbar. */
+    transition: transform 0.3s ease; /* Legger til en jevn overgang ved hover. */
+}
+
+/* Hover-effekt for ikoner */
+.icon:hover {
+    transform: scale(1.2); /* Forstørrer ikonet ved hover. */
+}
+
+/* Hamburger-meny */
+.hamburger-menu img {
+    height: 25px; 
+    width: 25px; 
+}
+
+.hamburger-menu {
+    background: none; /* Ingen bakgrunnsfarge for hamburger-menyknappen. */
+    border: none; /* Ingen kantlinje rundt knappen. */
+    padding: 0; /* Fjerner innvendig mellomrom. */
+}
+
+/* ===== AKTIVITET - HOVEDINNHOLD  ===== */
+.activity {
+    display: flex; /* Fleksibel layout for bilde og tekst. */
+    justify-content: space-between; /* Bilde og tekst plasseres på hver sin side. */
+    align-items: center; /* Sentraliserer innholdet vertikalt. */
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+.activity:nth-child(even) {
+    flex-direction: row-reverse; /* Vender rekkefølgen for annenhver seksjon. */
+}
+
+.activity-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gir bildene dybde med skygge. */
+}
+
+.activity-text {
+    flex: 1; /* Lar tekstseksjonen fylle tilgjengelig plass. */
+    padding: 20px;
+}
+
+.activity-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.activity-text p {
+    font-size: 1.2rem;
+    line-height: 1.6; 
+}
+
+/* Call-to-action-knapp */
+.cta-button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    font-size: 18px;
+    border: none; /* Fjerner standard kantlinje rundt knappen. */
+    border-radius: 5px;
+    text-decoration: none; /* Fjerner eventuell understrek fra lenken. */
+    cursor: pointer; /* Indikerer at knappen er interaktiv. */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Gir en jevn overgangseffekt ved hover. */
+}
+
+/* Hover-effekt for Call-to-action-knappen */
+.cta-button:hover {
+    background-color: #9dcfe1; /* Endrer farge når brukeren hovrer over knappen. */
+    transform: scale(1.05); /* Forstørrer knappen litt for en dynamisk effekt. */
+}
+
+/* ===== BILDEGALLERI ===== */
+.gallery {
+    text-align: center; /* Sentraliserer teksten i galleriet. */
+    padding: 50px 20px; /* Luft rundt galleriseksjonen for bedre separasjon fra andre seksjoner. */
+    background-color: white;
+}
+
+.gallery h2 {
+    margin-bottom: 20px; /* Avstand mellom overskriften og bildene for bedre struktur. */
+    font-size: 28px; 
+}
+
+.gallery-images {
+    display: flex; /* Fleksibel layout for å justere bildegalleriet. */
+    justify-content: center; /* Sentrerer bildene i galleriet. */
+    gap: 20px; /* Mellomrom mellom bildene. */
+}
+
+.gallery-images img {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Jevner overgang for hover-effekter. */
+}
+
+.gallery-images img:hover {
+    transform: scale(1.05); /* Forstørrer bildet litt ved hover for interaktivitet. */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Skygge for fremheving. */
+}
+
+/* ===== QUIZ ===== */
+.quiz {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #eef0f2;
+}
+
+.quiz h2 {
+    margin-bottom: 20px; /* Avstand mellom overskriften og innholdet under for bedre struktur. */
+    font-size: 28px; 
+}
+
+
+
+.quiz form {
+    max-width: 600px;
+    margin: 0 auto; /* Sentrerer formen horisontalt på siden. */
+}
+
+.quiz label {
+    display: block; /* Plasserer etiketten på en egen linje */
+    margin-bottom: 10px;
+    font-size: 18px; 
+    font-weight: bold; 
+}
+
+.quiz input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.quiz button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Endrer musepekeren til en hånd for å indikere at den er klikkbar. */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Glatte effekter ved hover. */
+}
+
+.quiz button:hover {
+    background-color: #9dcfe1; /* Endring av farge for å indikere hover-effekt. */
+    transform: scale(1.05); /* Enkel forstørrelse for å gi tilbakemelding. */
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center; /* Sentraliserer all tekst og innhold i footer. */
+    padding: 20px;
+    background-color: #333; 
+    color: white; 
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center; /* Sentraliserer ikonene. */
+    gap: 15px; 
+    margin-top: 10px; /* Plass over ikonene. */
+}
+
+footer .social-icons img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer; 
+    transition: transform 0.3s ease;
+}
+
+footer .social-icons img:hover {
+    transform: scale(1.2); /* Forstørrer ikonene ved hover. */
+}

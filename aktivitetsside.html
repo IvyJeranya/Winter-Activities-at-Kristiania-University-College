@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinteraktiviteter</title>
+    <link rel="stylesheet" href="/css/aktivitetsside.css">
+</head>
+<body>
+
+   <!-- Navigasjonsmeny -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="https://www.kristiania.no">
+                    <img src="/bilder/kristiania_logo.png" alt="Kristiania Logo">
+                </a>
+            </div>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="forside.html">Hjem</a></li>
+                    <li><a href="#ski">Ski</a></li>
+                    <li><a href="#snowboarding">Snowboarding</a></li>
+                    <li><a href="#slalom">Slalom</a></li>
+                    <li><a href="#ski-party">Ski Party</a></li>
+                    <li><a href="#quiz">Vinn premier!</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icons">
+                <img src="/bilder/search-icon.png" alt="Søk ikon" class="icon">
+                <img src="/bilder/bruker-icon.png" alt="Bruker ikon" class="icon">
+                <button class="hamburger-menu"><img src="/bilder/hamburger-meny.png" alt="Hamburger meny" class="icon"></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hovedinnhold og aktivitetsseksjon -->
+    <main>
+
+        <!-- Ski -->
+        <section class="activity" id="ski">
+            <div class="activity-image">
+                <img src="/bilder/vinteraktivitet3.jpeg" alt="Ski i vinterlandskap">
+            </div>
+            <div class="activity-text">
+                <h2>Ski</h2>
+                <p>
+                    Ski er den ultimate vinteraktiviteten for både nybegynnere og erfarne eventyrere. 
+                    Opplev roen i fjellandskapet, utfordre deg selv med lange løypeturer, eller prøv deg på bratte nedfarter. 
+                    Ski gir både trening og mental avkobling. Ikke glem å ta en pause i varmestua for kakao og nystekte vafler!
+                </p>
+                <a href="/html/forside.html#deltakelse" class="cta-button">Meld på nå!</a>
+            </div>
+        </section>
+
+        <!-- Snowboarding -->
+        <section class="activity reverse" id="snowboarding">
+            <div class="activity-image">
+                <img src="/bilder/snowboarding.jpg" alt="Snowboarding i fjellet">
+            </div>
+            <div class="activity-text">
+                <h2>Snowboarding</h2>
+                <p>
+                    Snowboarding er for den som elsker fart, stil og utfordring. 
+                    Enten du er nybegynner eller en erfaren brettkjører, byr fjellet på uendelige muligheter. 
+                    Fra halfpipes til frikjøring – finn din flyt på snøen!
+                </p>
+                <a href="/html/forside.html#deltakelse" class="cta-button">Meld på nå!</a>
+            </div>
+        </section>
+
+        <!-- Slalom -->
+        <section class="activity" id="slalom">
+            <div class="activity-image">
+                <img src="/bilder/ski2.webp" alt="Slalomkjøring i vinterlandskap">
+            </div>
+            <div class="activity-text">
+                <h2>Slalom</h2>
+                <p>
+                    Slalom er en perfekt kombinasjon av teknikk, fart og moro. 
+                    Test ferdighetene dine i velpreparerte løyper, eller utfordre deg selv med bratte bakker. 
+                    Perfekt for både nybegynnere og erfarne alpinister!
+                </p>
+                <a href="/html/forside.html#deltakelse" class="cta-button">Meld på nå!</a>
+            </div>
+        </section>
+
+        <!-- Ski Party -->
+        <section class="activity reverse" id="ski-party">
+            <div class="activity-image">
+                <img src="/bilder/skiparty.webp" alt="Ski Party feiring i fjellet">
+            </div>
+            <div class="activity-text">
+                <h2>Ski Party</h2>
+                <p>
+                    Hva er en vinteraktivitet uten en liten feiring – og en mulighet til å vinne en premie? 
+                    Ski Party er den perfekte måten å avslutte vintereventyret på. Delta på aktivitetene og quizen, 
+                    og du kan være med i trekningen av fantastiske premier! Ta del i en sosial og livlig atmosfære 
+                    hvor du kan feire avslutningen på en flott dag med aktiviteter. Nyt varm drikke, musikk og gode 
+                    samtaler i fjellufta – og kanskje stikke av med en gjev premie!
+                </p>
+                <a href="/html/forside.html#deltakelse" class="cta-button">Meld på nå!</a>
+            </div>
+        </section>
+
+        <!-- Bildegalleri -->
+        <section class="gallery" id="gallery">
+            <h2>Galleriet</h2>
+            <div class="gallery-images">
+                <img src="/bilder/galleri-bilde3.jpg" alt="Galleri bilde 1">
+                <img src="/bilder/galleri-bilde4.jpg" alt="Galleri bilde 2">
+                <img src="/bilder/galleri-bilde2.jpg" alt="Galleri bilde 3">
+            </div>
+        </section>
+
+        <!-- Quiz -->
+        <section class="quiz" id="quiz">
+            <h2>Vinterquiz</h2>
+            <p>Delta i quizen vår for en sjanse til å vinne en spennende premie!</p>
+            <form>
+                <label for="question1">Hvem vant Tour de Ski 2024 for kvinner?</label>
+                <input type="text" id="question1" name="question1" placeholder="Skriv ditt svar her">
+                <button type="submit" class="cta-button">Send inn svar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Kristiania University College</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/kristiania.no" target="_blank"><img src="/bilder/facebook-icon.webp" alt="Facebook"></a>
+            <a href="https://www.instagram.com/hkristiania/?hl=nb" target="_blank"><img src="/bilder/instagram-icon.webp" alt="Twitter"></a>
+            <a href="https://x.com/hkristiania" target="_blank"><img src="/bilder/twitter-icon.png" alt="Instagram"></a>
+            <a href="https://www.linkedin.com/school/høyskolen-kristiania" target="_blank"><img src="/bilder/linkedin-icon.webp" alt="Instagram"></a>
+        </div>
+    </footer>
+</body>
+</html>
